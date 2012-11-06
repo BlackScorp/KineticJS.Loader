@@ -1,9 +1,9 @@
-Kinetic.Loader = function(files){
+Kinetic.Plugins.Loader = function(files){
     this.files = files;
     this.progressFunc = null;
     this.errorFunc = null;
     this.completeFunc = null;
-    Kinetic.Assets = {};
+    Kinetic.Global.Assets = {};
     this.extensions ={
         'jpg':'image',
         'png':'image',
@@ -13,19 +13,19 @@ Kinetic.Loader = function(files){
     }
 }
 
-Kinetic.Loader.prototype.onProgress = function(progress){
+Kinetic.Plugins.Loader.prototype.onProgress = function(progress){
     this.progressFunc = progress;
     return this;
 }
-Kinetic.Loader.prototype.onError = function(error){
+Kinetic.Plugins.Loader.prototype.onError = function(error){
     this.errorFunc = error;
     return this;
 }
-Kinetic.Loader.prototype.onComplete = function(complete){
+Kinetic.Plugins.Loader.prototype.onComplete = function(complete){
     this.completeFunc = complete;
     return this;
 }
-Kinetic.Loader.prototype.load = function(){
+Kinetic.Plugins.Loader.prototype.load = function(){
     var i = 0,l=this.files.length,total = l,loaded = 0;
     var that = this;
     function progress(e){
@@ -67,7 +67,7 @@ Kinetic.Loader.prototype.load = function(){
  
         if(this.extensions[ext] == 'image'){
             fileObj = new Image();
-            if(!Kinetic.Assets[id]) Kinetic.Assets[id] = fileObj;
+            if(!Kinetic.Global.Assets[id]) Kinetic.Global.Assets[id] = fileObj;
             fileObj.onload = function(e){
                 progress(e);
             }
