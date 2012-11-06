@@ -5,10 +5,12 @@ Loader Plugin for KineticJS Canvas Framework
 #Installation
 
 * Include file after kinetic.js in HTML
+
     <script src="https://raw.github.com/BlackScorp/KineticJS.Loader/master/Loader.js"></script>
 
 * Download Loader.js into KineticJS/plugins , update thorfile, create new KineticJS version
 * Add the Loader as git submodule , update thorfile, create new KineticJS custom version
+
     git submodule add https://github.com/BlackScorp/KineticJS.Loader.git src/plugins/BlackScorp
 
 #Usage
