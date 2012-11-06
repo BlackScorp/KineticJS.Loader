@@ -9,7 +9,8 @@ Kinetic.Plugins.Loader = function(files){
         'png':'image',
         'gif':'image',
         'jpeg':'image',
-        'bmp':'image'
+        'bmp':'image',
+        'svg':'image'
     }
 }
 
