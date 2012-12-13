@@ -1,3 +1,4 @@
+(function() {
 Kinetic.Plugins.Loader = function(files){
     this.files = files;
     this.progressFunc = null;
@@ -89,3 +90,4 @@ Kinetic.Plugins.Loader.prototype.load = function(){
     }
     
 }
+})()
